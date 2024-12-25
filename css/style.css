@@ -13,6 +13,135 @@
     color: var(--main-color);
 }
 
+.logo img{
+    width: 61.09px;
+    height: 19px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 79px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 68px;
+    height: 55px;
+}
+.nav-links .lists a {
+    text-decoration: none; 
+    position: relative; 
+}
+
+/* Effet de survol */
+.nav-links .lists a:hover {
+    color: var(--main-color); 
+}
+  
+.nav-links .lists a:hover::before {
+    content: ""; 
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+  }
+
+.search-location {
+    display: flex;
+    justify-content: flex-start;
+    width: 377px;
+}
+
+.search-location div{
+    display: flex;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 49px;
+}
+
+.location {
+    height: 49px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+
+.location i {
+    margin-left: 20px;
+    color: black;
+}
+
+.lookup-text input {
+    font-weight: bold; /* Жирний текст */
+    text-align: center; /* Текст у центрі поля */
+    width: 100%; /* Ширина на весь контейнер */
+    border: 1px solid #F2F2F2;
+    outline: none;
+
+  }
+
+.lookup-button button {
+    padding: 15px 18px 15px 18px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+
+}
+
+.filters {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: 50px;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.button-filter {
+    padding: 10px 19px 10px 19px;
+    background-color: white; /* Задай свій колір */
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.button-filter i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.button-filter:hover {
+    background-color: var(--filter-bg-color);
+}
+
+.info i {
+    border-radius: 50%; /* Робимо іконку круглою */
+    border: 1px solid #D9D9D9;
+    /* padding: 5px; Простір всередині круга */
+    font-size: 10px; /* Розмір іконки */
+    margin-right: 10px; /* Відступ між іконкою та текстом */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px; /*Встановлюємо фіксовану ширину*/
+    height: 24px; /*Встановлюємо фіксовану висоту*/
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -76,6 +205,11 @@ a {
     width: 65%;
 }
 
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /****** Populaires ***********/
 .populaires {
     width: 32%;
