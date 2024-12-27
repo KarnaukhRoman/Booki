@@ -14,16 +14,20 @@
     color: var(--main-color);
 }
 
-.logo img{
-    width: 61.09px;
-    height: 19px;
-}
 
+/* Navigation block */
 .navigation{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 79px;
+    margin-bottom: 30px;
+}
+
+.logo img{
+    width: 61.09px;
+    height: 19px;
+    /* border: 1px solid green; */
 }
 
 .nav-links {
@@ -31,66 +35,87 @@
     justify-content: space-between;
     gap: 68px;
     position: relative;
-    bottom: 17px;
+    height: 35px;
+    bottom: 22px;
 }
 
 .nav-links a{
-    padding-top: 20px;
+    padding-top: 18px;
+    font-size: 16px;
 }
 
 /* Effet de survol */
 .nav-links a:hover {
     color: var(--main-color);
     border-top: 2px solid var(--main-color);
-    padding-top: 18px;
+    padding-top: 16px;
 }
-  
+
+/* Search block */
+.search-titre1{
+    margin-bottom: 8px;
+}
+
+.search-titre2{
+    font-size: 16px;
+    margin-bottom: 35px;
+}
 .search-location {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     width: 377px;
-}
-
-.search-location div{
-    display: flex;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
     height: 49px;
+    border-radius: 16px;
+    border: 1px solid var(--main-bg-color);
+    border-right: none;
+    border-left: none;
+    margin-bottom: 35px;
 }
 
 .location {
-    height: 49px;
-    width: 50px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 49px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     background-color: var(--main-bg-color);
 }
 
 .location i {
-    margin-left: 20px;
     color: black;
 }
 
-.lookup-text input {
-    font-weight: bold; /* Жирний текст */
-    text-align: center; /* Текст у центрі поля */
-    width: 100%; /* Ширина на весь контейнер */
-    border: 1px solid #F2F2F2;
+.lookup-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+#lookup-text {
+    font-weight: bold; 
+    text-align: center; 
+    width: 100%;
+    border: none;
     outline: none;
-
   }
 
-.lookup-button button {
-    padding: 15px 18px 15px 18px;
+.lookup-button{
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+    width: 132px;
     background-color: var(--main-color);
     color: white;
     font-weight: bold;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border: none;
-
+    border: 1px solid var(--main-color);
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
 }
 
+/* Filter block */
 .filters {
     display: flex;
     justify-content: flex-start;
@@ -123,6 +148,12 @@
     background-color: var(--filter-bg-color);
 }
 
+/* text info */
+.info {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
 .info i {
     border-radius: 50%; /* Робимо іконку круглою */
     border: 1px solid #D9D9D9;
