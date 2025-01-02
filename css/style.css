@@ -27,7 +27,6 @@
 .logo img{
     width: 61.09px;
     height: 19px;
-    /* border: 1px solid green; */
 }
 
 .nav-links {
@@ -52,24 +51,25 @@
 }
 
 /* Search block */
-.search-titre1{
+.search-title h1{
+    font-size: 22px;
     margin-bottom: 8px;
 }
 
-.search-titre2{
+.search-title p{
     font-size: 16px;
     margin-bottom: 35px;
 }
-.search-location {
+
+/* Search form */
+.lookup-form{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     width: 377px;
     height: 49px;
     border-radius: 16px;
     border: 1px solid var(--main-bg-color);
-    border-right: none;
-    border-left: none;
     margin-bottom: 35px;
 }
 
@@ -77,94 +77,89 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 49px;
+    min-width: 50px;
+    height: inherit;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color);    
 }
 
 .location i {
     color: black;
 }
 
-.lookup-form{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: inherit;
-}
 #lookup-text {
     font-weight: bold; 
     text-align: center; 
-    width: 100%;
     border: none;
     outline: none;
-  }
+    height: inherit;
+    box-sizing: border-box;
+}
 
 .lookup-button{
-    align-items: center;
-    justify-content: center;
-    height: 51px;
+    height: inherit;
     width: 132px;
     background-color: var(--main-color);
     color: white;
     font-weight: bold;
-    border: 1px solid var(--main-color);
+    border: none;
+    box-sizing: border-box;
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
+    cursor: pointer;
 }
 
 /* Filter block */
-.filters {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    height: 50px;
-    align-items: center;
+
+.label-filters {
+    flex-wrap: nowrap;
     font-size: 18px;
     font-weight: bold;
 }
 
+.buttons-filter {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
 .button-filter {
-    padding: 10px 19px 10px 19px;
-    background-color: white; /* Задай свій колір */
+    padding: 10px 19px;
+    background-color: white; 
     border: 2px solid #F2F2F2;
     border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: bold;
-
+    flex-wrap: wrap;
 }
 .button-filter i {
     margin-right: 10px;
     font-size: 22px;
+    flex-wrap: nowrap;
 }
 
 .button-filter:hover {
     background-color: var(--filter-bg-color);
 }
 
-/* text info */
+/***** Text info ******/
 .info {
     display: flex;
     font-size: 16px;
     margin-bottom: 35px;
 }
 .info i {
-    border-radius: 50%; /* Робимо іконку круглою */
+    border-radius: 50%; 
     border: 1px solid #D9D9D9;
-    /* padding: 5px; Простір всередині круга */
-    font-size: 10px; /* Розмір іконки */
-    margin-right: 10px; /* Відступ між іконкою та текстом */
+    font-size: 10px; 
+    margin-right: 10px; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 24px; /*Встановлюємо фіксовану ширину*/
-    height: 24px; /*Встановлюємо фіксовану висоту*/
+    width: 24px; 
+    height: 24px; 
 }
 
 body {
@@ -213,12 +208,12 @@ a {
 }
 
 /****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
+#hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
+#hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
@@ -235,6 +230,58 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
+.hebergements-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 33px;
+}
+
+.hebergements-cards a {
+    display: flex;
+    min-width: 30%;
+    height: 207px;
+    margin-bottom: 30px;
+}
+
+.hebergements-cards .card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.hebergements-cards .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.hebergements-cards img{
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.hebergements-cards .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.hebergements-cards .card-subtitle {
+     font-size: 14px;
+     margin-bottom: 5px;
+}
+
 /****** Populaires ***********/
 .populaires {
     width: 32%;
@@ -249,6 +296,12 @@ a {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.populaires-cards .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .populaires-cards img {
@@ -274,14 +327,87 @@ a {
 
 .populaires-cards .card-subtitle {
     margin: 0;
+    font-size: 14px;
 }
 
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
 
+/******* Activites *******/
 
+#activites {
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 560px;
+}
 
+.activites-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.activites-cards a{
+    display: flex;
+    width: 298px;
+    height: 439px;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.activites-cards a:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.activites-cards .affiche{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.activites-cards img{
+    width: 100%;
+    height: 90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.activites-cards .affiche-txt {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.activites-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/***** footer *****/
+
+.information {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--main-bg-color);
+    font-size: 14px;
+}
+
+.information .card-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+    padding: 20px;
+    text-align: left;
+}
+
+.information .card-info a {
+    margin-top: 10px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -289,7 +415,7 @@ a {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
-        flex-direction: column;
+        flex-direction: column;   
     }
 
     .hebergements {
@@ -323,4 +449,55 @@ a {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     /* ... */
+    
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        width: 130%;
+        gap: 5px;     
+    }
+
+    .nav-links a{
+        width: 50%;
+        text-align: center;
+        padding-bottom: 35px; 
+    }
+
+    .nav-links a:hover {
+        color: var(--main-color);
+        border-top: none;
+        border-bottom: 2px solid var(--main-color);
+    }
+
+    .lookup-form{
+        margin-bottom: 40px;
+        justify-content: flex-start;
+        width: 335px;
+    }
+
+    .lookup-button{   
+        font-size: 0;
+        background-color: var(--main-color);
+        height: inherit;
+        border-radius: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+    #lookup-text{
+        width: 200%;
+    }
+    
+    .lookup-button::before {
+        content: "\f002"; 
+        font-family: "Font Awesome 6 Free"; 
+        font-weight: 900;
+        font-size: 18px;
+        color: white;
+    }
+
 }
