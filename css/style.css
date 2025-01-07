@@ -398,7 +398,7 @@ a {
     flex-wrap: wrap;
     background-color: var(--main-bg-color);
     font-size: 14px;
-    padding: 15px 0px 20px 10px;
+    padding: 15px 10px 20px 10px;
     gap: 15px;
 }
 
@@ -597,8 +597,7 @@ a {
 
     .card-info{
         margin-left: 20px;
-        width: 100%;
+        width: 80%;
     }
-
 
 }
