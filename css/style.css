@@ -538,7 +538,6 @@ a {
 
     .populaires-cards{
         flex-flow: wrap column;
-        justify-content: ;
     }
 
     .populaires-cards a {
